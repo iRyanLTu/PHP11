@@ -2,9 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>PHP kursai</title>
+    <style>
+        table {
+            border-spacing: 10px ;
+            border-collapse: collapse;
+        }
+        td {
+         border: 1px solid black ;
+            paddding: 10px 20px ;
+        }
+        #celex {
+            background-color: black ;
+         color: white;
+
+        }
+        .abc {
+            color: black;
+            background-color: yellowgreen;
+        }
+        .ooo {
+            font-size: 25px;
+        }
+        .a {
+            font-weight: bold;
+        }
+        .para > .a {
+            color: blueviolet;
+        }
+        table > tbody > tr:first-child > td:first-child {
+            background-color: yellow;
+        }
+        table > tbody > tr:last-child > td:first-child {
+            background-color: red;
+
+        }
+        .xyz:hover {
+            background-color: red;
+        }
+        .hbn:before{
+            content: "amk";
+        }
+        .hbn:after{
+            content: "amk";
+            color:blue;
+            font-style:italic;
+            text-decoration:underline;
+        }
+        .abc:before {
+            content:attr(data-mano) ;
+        }
+    </style>
 </head>
 <body>
 Laba diena.
+
+<p class="para">
+opegkpoaktg paekt patke kokh rkatp tpaketk<span class="a">eaopretapo aeoptjetaop ioptmhoitm oeate</span>pktttekpeat kp
+    aketolapettoaete akngerita oryorskjor osrkyosaokeo
+</p>
+
+<div class="para">
+    plaefpaekompe <span class="a"> aopegmpoaemttae </span> okupdortkop opkaepomm oc piropfekc amk ppodtpok 86411245
+</div>
+
+<table>
+    <tr>
+        <td> aaaaaaaaaaa  </td>
+      <td> vvvv  </td>
+        <td> bbb  </td>
+    </tr>
+    <tr>
+        <td class="abc" data-mano="labas" >111111111</td>
+        <td id="celex">222222222</td>
+        <td>3333333333</td>
+    </tr>
+    <tr>
+        <td class="xyz"> cccccccccccc  </td>
+        <td class="hbn"> dddddd  </td>
+        <td> eeeeeeeee  </td>
+    </tr>
+</table>
 </body>
 </html>
