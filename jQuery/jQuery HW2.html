@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+        <script>
+        $(function() {
+            $('#tbl td').click(function () {
+
+                if  ($(this).hasClass('dark')){
+                    $(this).removeClass('dark');
+                }
+                else {
+
+                    $(this).addClass('dark');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .dark {
+            background-color: black;
+            color: white;
+        }
+        .table {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <table id="tbl" class="table" table="bordered">
+        <tr><td data-my="11">a1</td><td data-my="12">a2</td><td data-my="13">a3</td></tr>
+        <tr><td data-my="21">b1</td><td data-my="22">b2</td><td data-my="23">b3</td></tr>
+        <tr><td data-my="31">c1</td> <td data-my="32">c2</td><td data-my="33">c3</td></tr>
+    </table>
+</div>
+
+<form>
+  Username  <input type="name"> <br>
+    Password <input type="password"> <br>
+    Birthdate <input type="date"> <br>
+    <input type="submit">
+</form>
+
+
+</body>
+</html>
