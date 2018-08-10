@@ -19,7 +19,7 @@ switch ($m[0]){
             case "Kestas": $rez = "draugas"; break;
             case "Arvydas"; $rez = "priesas"; break;
             case "Petras"; $rez = "neutralus"; break;
-            case "Kazyas"; $rez = "draugas";
+            case "Kazys"; $rez = "draugas";
     default: $rez = "nezinoma";
 }
 echo $m[0] . ' yra ' . $rez;
