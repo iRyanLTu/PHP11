@@ -16,7 +16,7 @@ function divisible($num) {
 }
 
 for($i = 0;$i < count($array);$i++) {
-    if (divisible(strlen($array[0]))) {
+    if (divisible(strlen($array[$i]))) {
     }
-    echo $array[0];
+    echo $array[$i];
 }
