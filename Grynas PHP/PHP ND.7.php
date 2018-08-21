@@ -10,12 +10,12 @@ $sveciai =  [
     [
         'vardas' => 'Jonas',
         'lytis' => 'vyras',
-        'mityba' => 'viska'
+        'mityba' => 'viskas'
     ] ,
     [
         'vardas' => 'Petras',
         'lytis' => 'vyras',
-        'mityba' => 'viska'
+        'mityba' => 'viskas'
     ] ,
     [
         'vardas' => 'Antanas',
@@ -30,48 +30,27 @@ $sveciai =  [
 ];
 
 
+ $vyr = 0;
+ $mot = 0;
+ $viskas = 0;
+ $vegetaras = 0;
+ $vegane = 0;
 
-$count = 0;
-foreach ($sveciai as $key=>$value) {
-    if ($value ['lytis'] == 'vyras') {
-        $count++;
-    }
+ foreach ($sveciai as $zmones) {
+     if ($zmones['lytis'] == 'vyras') {
+         $vyr++;
+     }
+ else {
+         $mot++;
+ }
+ }
+if ($zmones['mityba'] == 'viskas') {
+     $viskas++;
 }
-echo $count;
-echo '<br>';
+elseif ($zmones['mityba'] == 'vegetaras') {
+     $vegetaras++;
+}
+else {
+     $vegane++;
+}
 
-$count = 0;
-foreach ($sveciai as $key=>$value) {
-    if ($value ['lytis'] == 'moteris') {
-        $count++;
-    }
-}
-echo $count;
-echo '<br>';
-
-$count = 0;
-foreach ($sveciai as $key=>$value) {
-    if ($value ['mityba'] == 'viska') {
-        $count++;
-    }
-}
-echo $count;
-echo '<br>';
-
-$count = 0;
-foreach ($sveciai as $key=>$value) {
-    if ($value ['mityba'] == 'vegetaras') {
-        $count++;
-    }
-}
-echo $count;
-echo '<br>';
-
-$count = 0;
-foreach ($sveciai as $key=>$value) {
-    if ($value ['mityba'] == 'vegane') {
-        $count++;
-    }
-}
-echo $count;
-echo '<br>';
