@@ -11,31 +11,44 @@ class nd
 
 
     public $zmones1 = [
-        [ 'vardas'=> 'Antanas',
+        ['vardas' => 'Antanas',
             'lytis' => 'vyras'
         ],
-        [ 'vardas'=> 'Petras',
+        ['vardas' => 'Petras',
             'lytis' => 'vyras'
         ],
-        [ 'vardas'=> 'Ona',
+        ['vardas' => 'Ona',
             'lytis' => 'moteris'
         ],
-        [ 'vardas'=> 'Janina',
+        ['vardas' => 'Janina',
             'lytis' => 'moteris'
         ],
-        [ 'vardas'=> 'Kazys',
+        ['vardas' => 'Kazys',
             'lytis' => 'vyras'
         ]
     ];
 
-    function paskaiciuoti($kiek) {
-        $this->zmones1[] = $kiek;
-    }
-    function suskaiciuoti (){
-        $s = 0;
-        foreach ($this->zmones1 as $x){
-            $s += $x;
+    function Get($name)
+    {
+        $vyras = 0;
+        for ($i = 0; $i < count($zmones1); $i++) {
+            if ($zmones1[i]['lytis'] == 'vyras') {
+                $vyras += 1;
+            }
         }
-        return $s / count($this->zmones1);
+        return $vyras;
+    }
+    function Get2()
+    {
+        $moteris = 0;
+        for ($i = 0; $i < count($zmones1); $i++) {
+            if ($zmones1[i]['lytis'] == 'vyras') {
+                $moteris += 1;
+            }
+        }
+        return $moteris;
     }
 }
+$obj = new nd();
+echo $obj -> Get('vyras');
+echo $obj -> Get2('moteris');
