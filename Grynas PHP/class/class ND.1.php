@@ -28,7 +28,7 @@ class nd
         ]
     ];
 
-    function Get($name)
+    function Get($v)
     {
         $vyras = 0;
         for ($i = 0; $i < count($zmones1); $i++) {
@@ -42,7 +42,7 @@ class nd
     {
         $moteris = 0;
         for ($i = 0; $i < count($zmones1); $i++) {
-            if ($zmones1[i]['lytis'] == 'vyras') {
+            if ($zmones1[i]['lytis'] == 'moteris') {
                 $moteris += 1;
             }
         }
