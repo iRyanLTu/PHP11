@@ -21,7 +21,7 @@ class uzd2
         foreach ($this->mas as $e) {
             if ($s += $e % 2 != 0);
         }
-        return $e;
+        return $s;
     }
 
 
