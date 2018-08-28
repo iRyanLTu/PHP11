@@ -9,47 +9,23 @@ Sukurti klasę auto, kurioje yra savybės: gamintojas, modelis, metai.
 
 class auto {
 
-    public $list = [
-        ['Gamintojas'=> '',
-       'Modelis'=>'',
-        'Metai'=> ''
-            ],
-        ['Gamintojas'=> '',
-            'Modelis'=>'',
-            'Metai'=> ''
-        ],
-        ['Gamintojas'=> '',
-            'Modelis'=>'',
-            'Metai'=> ''
-        ],
-        ['Gamintojas'=> '',
-            'Modelis'=>'',
-            'Metai'=> ''
-        ],
-        ['Gamintojas'=> '',
-            'Modelis'=>'',
-            'Metai'=> ''
-        ],
-        ];
+    public $gamintojas, $modelis, $metai;
 
     function __construct($gam, $mod, $metai){
-        $this->list = [
-            'Gamintojas' => $gam,
-            'Modelis' =>  $mod,
-            'Metai' => $metai
-    ];
+            $this->gamintojas = $gam;
+            $this->modelis = $mod;
+            $this->metai = $metai;
     }
 
     function info () {
-
-        $s = "Gamintojas: %s, modelis: %s, metai: %s";
-        echo sprintf($s, $this->list['Gamintojas'],
-            $this->list['Modelis'], $this->list['Metai']);
+        $s = 'Gamintojas: %s, modelis: %s, metai: %s';
+        echo sprintf($s, $this->gamintojas,
+            $this->modelis, $this->metai);
 
     }
 
 
 }
 
-$lz = new auto('Honda', 'Civic', 2005);
+$lz = new auto('Mercedes-Benz', 'AMG', 2008);
 $lz->info();

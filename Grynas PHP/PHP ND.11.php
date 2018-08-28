@@ -3,14 +3,13 @@
 Sukurti funkciją, kuri perduotą į funkciją masyve su tekstais pakeičia visus simbolius į
  mažąsias raides ir gražina masyvą kaip rezultatą.
  */
-$mas = ('DOBRI DIEN siandien SEKMADIENIS');
+$m = ['DOBRI', 'DIEN', 'siandien', 'SEKMADIENIS'];
 function skc ($mas)
 {
-    foreach ($mas as $lower) {
-        if (strtolower($lower)) {
-        }
-        return $lower;
+    for ($i=0; $i<count($mas);$i++){
+   $mas[$i]= strtolower($mas[$i]);
     }
+    return $mas;
 
 }
-echo strtolower($mas);
+var_dump (skc($m));

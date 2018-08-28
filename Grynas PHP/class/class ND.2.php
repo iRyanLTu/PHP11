@@ -44,6 +44,7 @@ class skc1
     }
 
 $att = new skc1();
+$att->ptc();
 var_dump($att);
 
 
