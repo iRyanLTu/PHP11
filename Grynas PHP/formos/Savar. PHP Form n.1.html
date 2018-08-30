@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+
+<!--Sukurti forma: gamintojas, modelis, metai (select), kaina. Nauja/naudota (radio), dauzta (checkbox). Su metodu post perduoti duomenis y
+ back end ir sudeti i klase auto su atitinkamomis savybemis. Rezultata isvest su var_dump.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto</title>
+</head>
+<body>
+<form method="POST" action="Savar. PHP Form n.1.php">
+    <label>Gamintojas</label>
+    <input type="text" name="Gamintojas"><br>
+    <label>Modelis</label>
+    <input type="text" name="Modelis"><br>
+    <label>Metai</label>
+    <select name="Metai">
+        <option value="2010+">2010+</option>
+         <option value="2000+">2000+</option>
+         <option value="1990+">1990+</option>
+    </select><br>
+    <label>Nauja</label><input type="radio" name="Busena" value="Nauja">
+   <label>Naudota</label> <input type="radio" name="Busena" value="Naudota">
+    <label>Dauzta</label><input type="checkbox" name="Busena" value="Dauzta"><br>
+    <label>Kaina</label>
+    <input type="text" name="Suma" value="Kaina"><br>
+
+    <input type="Submit" value="Siusti">
+
+</form>
+</body>
+</html>
