@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!--Frontend'e sukurti post formą svečio informacijai įvesti: vardas (text), lytis (radio), patiekalas (select),
+ apibūdinimas (textarea). Backend'e sukurti svečio klasę su svečio savybėmis.
+  Konstruktotiaus pagalba įdėti svečio post duomenis į klasės egzemplioriaus savybes.
+   Pademonstruoti svečio klasės egzempliorių su var_dump.
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="PHP Form ND1.php">
+    <label>Vardas</label>
+    <input type="text" name="Vardas"> <br>
+    <label>Lytis:</label><br>
+    <label>Vyras</label><input type="radio" name="Vyr" value="Vyras">
+    <label>Moteris</label><input type="radio" name="Mot" value="Moteris"><br>
+    <label>Patiekalas</label>
+    <select name="Patiek.">
+        <option value="Visavalgis">Visk.</option>
+        <option value="Vegetaras">Veget.</option>
+        <option value="Veganas">Vegan.</option>
+    </select> <br>
+    <label>Apibudinimas</label><br>
+    <textarea rows="5" cols="50"></textarea><br>
+    <input type="submit" value="Siusti">
+
+
+</form>
+</body>
+</html>
