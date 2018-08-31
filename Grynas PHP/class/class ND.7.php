@@ -12,23 +12,17 @@ class parduotuve
     {
         $this->prekes = new parduotuve($pavadinimas, $kaina);
     }
-
-    function top3($top)
-    {
-       foreach($this->prekes as $preke){
-
-       }
-
-        }
-
 }
 
-$zz = new parduotuve ();
-$zz->ideti('Suris', 3);
-$zz->ideti('Mesa', 5);
-$zz->ideti('Sultys', 4);
-$zz->ideti('Ledai', 3);
+usort($this->prekes, function ($a, $b) {
+});
 
-$p = $zz->top3(3);
-echo '<br>';
-var_dump($p);
+$lowest = array_slice($this->prekes, 0, 3);
+
+
+$obj= new parduotuve();
+$obj->ideti('Suris', 3);
+$obj->ideti('Mesa', 5);
+$obj->ideti('Sultys', 4);
+$obj->ideti('Ledai', 3);
+var_dump($obj);
