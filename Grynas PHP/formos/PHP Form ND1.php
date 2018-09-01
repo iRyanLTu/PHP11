@@ -7,19 +7,17 @@ Pademonstruoti svečio klasės egzempliorių su var_dump.
  */
 
 class svecias{
-    public $vardas, $vyr, $mot, $visavalgis, $vegetaras, $veganas;
+    public $vardas, $vyr, $mot, $patiek;
 
-    function __construct($var, $vyras, $moteris, $visk, $veget, $vegan){
+    function __construct($var, $vyras, $moteris, $patiekalas){
 
         $this->vardas=$var;
         $this->vyr=$vyras;
         $this->mot=$moteris;
-        $this->visavalgis=$visk;
-        $this->vegetaras=$veget;
-        $this->veganas=$vegan;
+        $this->patiek=$patiekalas;
 
     }
 }
 
-$z = new svecias($_POST['Vardas'], $_POST['Lytis'], $_POST['Patiekalas'], $_POST['Visavalgis'], $_POST['Vegetaras'], $_POST['Veganas']);
+$z = new svecias($_POST['Vardas'], $_POST['Vyr'], $_POST['Mot'], $_POST['Patiek']);
 var_dump($_POST);

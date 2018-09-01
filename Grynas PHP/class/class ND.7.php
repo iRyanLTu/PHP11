@@ -10,19 +10,33 @@ class parduotuve
 
     function ideti($pavadinimas, $kaina)
     {
-        $this->prekes = new parduotuve($pavadinimas, $kaina);
+        $this->prekes[] = [
+            'pavadinimas' => $pavadinimas,
+            'kaina' => $kaina
+        ];
     }
+
+    function top3(){
+        usort($this->prekes, function ($a, $b){
+            if ($a['kaina']>$b['kaina']) return 1;
+            elseif ($a['kaina']<$b['kaina']) return -1;
+            else return 0;
+    });
+         for ($i=0; $i<count($this->prekes) && $i<3; $i++){
+             $m[]=$this->prekes[$i];
+         }
+         return $m;
+}
 }
 
-usort($this->prekes, function ($a, $b) {
-});
-
-$lowest = array_slice($this->prekes, 0, 3);
 
 
-$obj= new parduotuve();
-$obj->ideti('Suris', 3);
-$obj->ideti('Mesa', 5);
-$obj->ideti('Sultys', 4);
-$obj->ideti('Ledai', 3);
-var_dump($obj);
+$o= new parduotuve();
+$o->ideti('Suris', 3);
+$o->ideti('Mesa', 5);
+$o->ideti('Sultys', 4);
+$o->ideti('Ledai', 3);
+$r = $o->top3();
+var_dump($r);
+
+
