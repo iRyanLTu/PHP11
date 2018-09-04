@@ -31,7 +31,8 @@ echo '<br>';
 class vaikams extends preke{
 
     function info (){
-        $s= 'Kodas: %s, Pavadinimas: %s, Kaina: %s (vaikams)';
+        $nuol = $this->kaina - ($this->kaina / 100 * 20);
+        $s= 'Kodas: %s, Pavadinimas: %s, Kaina: %s (vaikams), Nuolaida:' . $nuol;
         echo sprintf($s, $this->kodas,$this->pavadinimas,$this->kaina);
     }
 
@@ -42,9 +43,9 @@ echo '<br>';
 
 class studentams extends preke{
 
-    function info ($nuol){
-
-        $s= 'Kodas: %s, Pavadinimas: %s, Kaina: %s (studentams)';
+    function info (){
+        $nuol = $this->kaina - ($this->kaina / 100 * 20);
+        $s= 'Kodas: %s, Pavadinimas: %s, Kaina: %s (studentams), Nuolaida:' . $nuol;
         echo sprintf($s, $this->kodas,$this->pavadinimas,$this->kaina);
     }
 

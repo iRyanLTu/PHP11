@@ -22,3 +22,27 @@ for( $j = 2; $j <= $num; $j++ )
     if( $k == $j )
         echo $j, "<br>";
 }
+
+/** galima ir taip */
+
+class abc {
+    static function tikrinti($skaicius){
+        $pirminis=true;
+        for ($i=2; $i<$skaicius - 1; $i++){
+            if($skaicius % $i == 0){
+                $pirminis=false;
+                break;
+            }
+        }
+        return $pirminis;
+    }
+    static function pirminiai($from, $to){
+        $m = [];
+        for ($i = $from; $i <= $to; $i++){
+            if (self::tikrinti($i))  $m[]=$i;
+        }
+        return $m;
+    }
+}
+
+var_dump(abc::pirminiai(10, 30));
