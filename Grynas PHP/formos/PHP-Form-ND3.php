@@ -48,8 +48,6 @@ if (file_exists('PHP-Form-ND3.txt')){
     var_dump($p);
 }
 
-
-
 ?>
 
 
