@@ -10,23 +10,54 @@
  */
 
 class softas{
-    public $licenzijos;
+    public $licenzijos=[];
+    public $programos=[];
 
-    function __construct($lic)
+
+    function __construct($licenzija)
     {
-        $this->licenzijos=$lic;
-    }
-    function add($pav){
 
-        $prog[]= [
-            'Pavadinimas'=> $pav,
-            'Licenzija' => $this->licenzijos
+        $this->licenzijos = $licenzija;
+    }
+
+    function add($pav, $liz){
+
+        $this->programos[] = [
+            'Pavadinimas' => $pav,
+            'Licenzija' => $liz
         ];
-
     }
 
-    function info($tink, $netink){
-
-
+    function info($tipas){
+        echo '<table>';
+        foreach ($this->programos as $programa){
+            $yra = in_array($programa['Licenzija'], $this->licenzijos);
+            echo '<tr>';
+            if($tipas == 'tinkama'&& $yra){
+                echo '<td>' . $programa['Pavadinimas'] . '</td>';
+                echo '<td>' . $programa['Licenzija'] . '</td>';
+            }
+            elseif($tipas == 'netinkama'&& !$yra){
+                echo '<td>' . $programa['Pavadinimas'] . '</td>';
+                echo '<td>' . $programa['Licenzija'] . '</td>';
+            }
+            echo '</tr>';
+        }
+        echo '</table>';
     }
 }
+
+$o = new softas([
+'MIT',
+    'BSD',
+    'GPL'
+    ]);
+
+$o->add('Registras', 'MIT');
+$o->add('Ligoniai', 'BSD');
+$o->add('Sodra', 'Komerciniai');
+
+echo '<b>programos su tinkamomis licenzijomis</b>:<br>';
+$o->info('tinkama');
+echo '<b>programos su netinkamomis licenzijomis</b>:<br>';
+$o->info('netinkama');
