@@ -7,15 +7,14 @@
  */
 
 
-$mas = ['abcdefg^oaetoat$oaeirieao'];
+
+$mas = ('abcdefg^oaetoat$oaeirieao');
+
+$n = '^oaetoat$';
+
+$jau = str_replace($n, 'oaetoat', $mas);
+
+echo $jau;
 
 
-
-foreach ($mas as $m){
-    if (strpos($m, '^') == true){
-            trim($m, '^$');
-    } else {
-        return false;
-    }
-}
 

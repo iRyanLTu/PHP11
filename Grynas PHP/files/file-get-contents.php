@@ -6,5 +6,5 @@ file_put_contents('write.txt', $s . ' aaa ');
 
 echo '<ok>';
 
-$page = file_get_contents('http://www.delfi.lt');
+$page = file_get_contents('https://www.delfi.lt/sitemap.xml');
 file_put_contents('delfi.txt', $page);
