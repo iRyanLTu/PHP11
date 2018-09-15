@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eurolyga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Google font Audio wide -->
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- CSS stilius slaidams -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body style="background-color: black">
+
+<!-- Nuorodos -->
+
+<div class="row" style="font-family: 'Audiowide', serif">
+    <div class="col-sm-2" style="background-color:black"> <img src="http://www.euroleague.net/_euroleague/themes/default/images/main-logo-el.png" alt="Euroleague"> </div>
+     <div class="col-sm-3" style="background-color:coral"> <a href="http://www.euroleague.net/" style="color: white; font-size: 30px;"><i class="fas fa-basketball-ball"></i> Home</a> </div>
+    <div class="col-sm-2" style="background-color:black"><a href="Teams.html" style="color: white; font-size: 30px;"><i class="fas fa-shield-alt"></i> Teams</a></div>
+     <div class="col-sm-3" style="background-color:coral"><a href="Eurolyga.html" style="color: white; font-size: 30px;"><i class="fas fa-plus"></i> Add</a></div>
+     <div class="col-sm-2" style="background-color:black"><a href="Eurolyga.html" style="color: white; font-size: 30px;"><i class="fas fa-info-circle"></i> Links</a></div>
+</div>
+
+<!-- Slideshow kodas -->
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="https://www.nba-live.com/files/badluckluke/preview_euro_intro.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="https://bit.ly/2CVtqvU" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="https://bit.ly/2padcFK" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+
+<!-- Footer -->
+
+<footer style="color: white; font-family: 'Audiowide', serif">
+    <p>Posted by: Euroleague</p>
+    <p>Contact information: <a href="mailto:euroleague@gmail.com">
+        euroleague@gmail.com</a>.</p>
+</footer>
+
+</body>
+</html>
