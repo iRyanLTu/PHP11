@@ -17,8 +17,16 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <!-- Font awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- CSS stilius slaidams -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- CSS stilius lentelei -->
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <!-- Slideshow stuff -->
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        .mySlides {display:none;}
+    </style>
+
 
 </head>
 <body style="background-color: black">
@@ -29,69 +37,33 @@
     <div class="col-sm-2" style="background-color:black"> <img src="http://www.euroleague.net/_euroleague/themes/default/images/main-logo-el.png" alt="Euroleague"> </div>
      <div class="col-sm-3" style="background-color:coral"> <a href="http://www.euroleague.net/" style="color: white; font-size: 30px;"><i class="fas fa-basketball-ball"></i> Home</a> </div>
     <div class="col-sm-2" style="background-color:black"><a href="Teams.html" style="color: white; font-size: 30px;"><i class="fas fa-shield-alt"></i> Teams</a></div>
-     <div class="col-sm-3" style="background-color:coral"><a href="Add.html" style="color: white; font-size: 30px;"><i class="fas fa-plus"></i> Add</a></div>
+     <div class="col-sm-3" style="background-color:coral"><a href="Add.php" style="color: white; font-size: 30px;"><i class="fas fa-plus"></i> Add</a></div>
      <div class="col-sm-2" style="background-color:black"><a href="http://www.eurocupbasketball.com/" style="color: white; font-size: 30px;"><i class="fas fa-info-circle"></i> Links</a></div>
 </div>
 
-<!-- Slideshow kodas -->
-<div class="slideshow-container">
 
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="https://www.nba-live.com/files/badluckluke/preview_euro_intro.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="https://bit.ly/2CVtqvU" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="https://bit.ly/2padcFK" style="width:100%">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
+<div class="w3-content w3-section" style="max-width:1100px">
+    <img class="mySlides" src="https://www.nba-live.com/files/badluckluke/preview_euro_intro.jpg" style="width:100%">
+    <img class="mySlides" src="https://bit.ly/2CVtqvU" style="width:100%">
+    <img class="mySlides" src="https://bit.ly/2padcFK" style="width:100%">
 </div>
 
 <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    var myIndex = 0;
+    carousel();
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
+    function carousel() {
         var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every 4 seconds
     }
 </script>
-
 
 <!-- Footer -->
 

@@ -1,3 +1,7 @@
+<?php
+//include "Project-connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
 </head>
 <body>
 <form method="POST" action="Teams.html">
-    <label>Logo: <input type="image"></label><br>
+    <label>Logo: <input type="file"></label><br>
     <label>Pavadinimas: <input type="text"></label><br>
     <label>Šalis: </label>
     <select>
