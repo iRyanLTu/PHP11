@@ -1,7 +1,11 @@
 <?php
 
 $srv = "localhost";
-$usr = "root";
-$psv = "";
+$sch = "rytis";
+$usr = "rytis";
+$psv = "qwertyQWERTY123!@#";
 
-$cnn = new mysqli ($srv, $usr, $psv );
+$cnn = new PDO ("mysql:host={$srv};dbname={$sch}", $usr, $psv);
+$cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
