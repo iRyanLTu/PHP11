@@ -12,7 +12,7 @@ $usr = "rytis";
 $psv = "qwertyQWERTY123!@#";
 
 $conn = mysqli_connect($srv, $sch, $usr, $psv);
-// Check connection
+
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
