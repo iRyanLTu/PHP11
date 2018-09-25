@@ -29,7 +29,7 @@ function iseig ($year, $month)
       if ($w == 0 || $w = 6 ){
           echo $data->format("Y-m-d") . '<br>';
       }
-      $data->add(new DateInterval("P1D"));
+      $data->add(new DateInterval{'P1D'});
   }
   while ($m == $month);
 }
